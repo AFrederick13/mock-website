@@ -3,43 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A sample website for a fictional business, with example company information and offerings.">
+    <meta name="theme-color" content="#f5f3ed">
     <title>Your Business</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <a href="index.html" class="logo">
-                <img src="images/companylogo.webp">
-            </a>
+    <header class="site-header">
 
-        <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-                
+        <nav class="nav-shell" aria-label="Main navigation">
+            <a href="index.html" class="logo" aria-label="Your Business home">Your Business</a>
+            <button class="hamburger" id="hamburger-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
             <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="service.html">Service</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="service.html">What we offer</a></li>
+                <li><a class="nav-cta" href="schedule.html">Contact us<span aria-hidden="true">↗</span></a></li>
             </ul>
         </nav>
+
     </header>
 
-    <h1>
-        Your Business
-    </h1>
+    <main>
 
-    <img src="images/businesslogo.webp" id="businesslogo">
+        <section class="hero page-width">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="eyebrow-mark"></span> A business for you</p>
+                <h1>Great products.<br><span>Great people.</span></h1>
+                <p class="hero-intro">Find what you need, get some helpful guidance, and count on friendly support whenever you need it.</p>
+                <div class="button-row"><a class="button button-dark" href="service.html">See what we offer <span aria-hidden="true">↗</span></a><a class="text-link" href="about.html">About the business <span aria-hidden="true">→</span></a></div>
+                <p class="hero-note">Thoughtful choices. Straightforward service.</p>
+            </div>
 
-    <p>
-        Your biz here!
-    </p>
+            <div class="hero-visual" aria-label="Example message from Your Business">
+                <div class="visual-topline"><span>EVERYDAY, MADE EASIER</span><span>HERE TO HELP</span></div>
+                <div class="visual-image"></div>
+                <div class="visual-stamp">GREAT<br>THINGS<br>START HERE<span>✳</span></div>
+                <div class="visual-caption"><span>Useful things.<br>Helpful people.</span><span>YOUR LOCAL<br>GO-TO</span></div>
+            </div>
+        </section>
+
+        <section class="intro-band">
+            <div class="page-width intro-inner">
+                <p class="eyebrow">The way we do business</p>
+                <p class="intro-statement">Great business is built on useful products, honest answers, and people who take the time to help.</p>
+            </div>
+        </section>
+
+        <section class="services-preview page-width section-space">
+            <div class="section-heading"><div><p class="eyebrow">What we offer</p><h2>Useful things.<br><span>Helpful people.</span></h2></div><a class="text-link" href="service.html">See all offerings <span aria-hidden="true">→</span></a></div>
+            <div class="service-list">
+                <a class="service-row" href="service.html#products"><span class="service-number">01</span><span class="service-name">Everyday essentials</span><span class="service-detail">A useful selection of products for home, work, and daily life.</span><span class="service-arrow" aria-hidden="true">↗</span></a>
+                <a class="service-row" href="service.html#guidance"><span class="service-number">02</span><span class="service-name">Helpful guidance</span><span class="service-detail">Clear answers from people who know what they're talking about.</span><span class="service-arrow" aria-hidden="true">↗</span></a>
+                <a class="service-row" href="service.html#support"><span class="service-number">03</span><span class="service-name">Reliable support</span><span class="service-detail">Friendly help before, during, and after you find what you need.</span><span class="service-arrow" aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+
+        <section class="concept-work"><div class="page-width section-space">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">What matters to us</p>
+                    <h2>Business should feel<br><span>straightforward.</span></h2>
+                </div>
+                <p class="heading-aside">This company is built around the things that make a great experience.</p>
+            </div>
+
+            <div class="work-grid">
+                <article class="work-tile work-tile-citrus">
+                    <span class="work-type">01 / QUALITY</span>
+                    <div class="work-wordmark">Made<br>to Last</div>
+                    <p>Great quality should feel like the obvious choice.</p>
+                </article>
+
+                <article class="work-tile work-tile-blue">
+                    <span class="work-type">02 / PEOPLE</span>
+                    <div class="work-wordmark work-wordmark-serif">Here<br>to help</div>
+                    <p>Real answers from friendly, knowledgeable people.</p>
+                </article>
+
+                <article class="work-tile work-tile-lilac">
+                    <span class="work-type">03 / RELIABILITY</span>
+                    <div class="work-wordmark work-wordmark-small">Count<br>on Us</div>
+                    <p>Dependable support, whenever you need it.</p>
+                </article>
+            </div>
+        </div>
+        </section>
+
+        <section class="closing-cta page-width">
+            <p class="eyebrow">Questions? We're happy to help.</p>
+            <div class="closing-inner">
+                <h2>We're here<br><span>when you need us.</span></h2>
+                <a class="button button-light" href="schedule.html">Get in touch <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="page-width footer-inner">
+            <a href="index.html" class="footer-brand">Your Business</a>
+            <p>Example website for a business.</p>
+            <span>© 2026 Your Business</span>
+        </div>
+    </footer>
 
 </body>
 

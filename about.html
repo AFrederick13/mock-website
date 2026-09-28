@@ -3,41 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Business</title>
+    <meta name="description" content="Learn about Your Business, a fictional company in this example website.">
+    <meta name="theme-color" content="#f5f3ed">
+    <title>About | Your Business</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <a href="index.html" class="logo">
-                <img src="images/companylogo.webp">
-            </a>
-
-        <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-                
+    <header class="site-header">
+        <nav class="nav-shell" aria-label="Main navigation">
+            <a href="index.html" class="logo" aria-label="Your Business home">Your Business</a>
+            <button class="hamburger" id="hamburger-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="service.html">Service</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
+                <li><a href="service.html">What we offer</a></li>
+                <li><a class="nav-cta" href="schedule.html">Contact us<span aria-hidden="true">↗</span></a></li>
             </ul>
         </nav>
     </header>
 
-    <h1>
-        About us
-    </h1>
+    <main>
 
-    <p>
-        Local business, founded with humble beginnings.
-    </p>
+        <section class="page-hero page-width">
+            <p class="eyebrow"><span class="eyebrow-mark"></span> A little about the business</p>
+            <h1>Amazing business starts<br>with <span>amazing people.</span></h1>
+            <p class="page-intro">A company to set an example.</p>
+        </section>
+
+        <section class="about-feature">
+            <div class="page-width about-feature-inner">
+            <div class="about-mark">
+                <div class="about-mark-title">Great people.<br>Great business.</div>
+                <span>THE COMPANY</span>
+            </div>
+            <div class="about-copy">
+                <p class="eyebrow">A simple idea</p>
+                <h2>Make it useful.<br><span>Make it personal.</span></h2>
+                <p>We believe a great business should make everyday things easier. That starts with useful products, clear information, and a team that treats every customer with care.</p>
+                <p>This is your company. Your business name, story, offerings, and contact details could be anywhere or anyway you want.</p>
+                <a class="text-link" href="service.html">See what we offer <span aria-hidden="true">→</span></a>
+            </div>
+            </div>
+        </section>
+
+        <section class="process-section page-width section-space">
+            <div class="section-heading"><div>
+                <p class="eyebrow">What you can expect</p>
+                <h2>Simple values.<br><span>Everyday difference.</span></h2>
+            </div>
+            <p class="heading-aside">The best customer experience is often built from small, consistent choices.</p>
+        </div>
+            <div class="process-grid">
+                <article><span class="service-number">01 / QUALITY</span>
+                    <h3>Things that work well.</h3>
+                    <p>We focus on useful, dependable products and straightforward information.</p>
+                </article>
+                
+                <article><span class="service-number">02 / SERVICE</span>
+                    <h3>People who listen.</h3>
+                    <p>We take time to understand what you need and help you find a good fit.</p>
+                </article>
+                
+                <article><span class="service-number">03 / FOLLOW-THROUGH</span>
+                    <h3>Support you can count on.</h3>
+                    <p>We stay helpful and responsive, from your first question onward.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="closing-cta page-width">
+            <p class="eyebrow">Need a hand?</p>
+            <div class="closing-inner">
+                <h2>We're happy<br><span>to help.</span></h2>
+                <a class="button button-light" href="schedule.html">Contact us <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="page-width footer-inner">
+            <a href="index.html" class="footer-brand">Your Business</a>
+            <p>Example website for a business.</p>
+            <span>© 2026 Your Business</span>
+        </div>
+    </footer>
 
 </body>
 

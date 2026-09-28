@@ -3,49 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Contact Your Business using the example contact details on this fictional business website.">
+    <meta name="theme-color" content="#f5f3ed">
+    <title>Contact | Your Business</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <a href="index.html" class="logo">
-                <img src="images/companylogo.webp">
-            </a>
-
-        <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-                
+    <header class="site-header">
+        <nav class="nav-shell" aria-label="Main navigation">
+            <a href="index.html" class="logo" aria-label="Your Business home">Your Business</a>
+            <button class="hamburger" id="hamburger-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="service.html">Service</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="service.html">What we offer</a></li>
+                <li><a class="nav-cta" href="schedule.html" aria-current="page">Contact us<span aria-hidden="true">↗</span></a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="booking" style="padding: 40px 20px; text-align: center;">
+    <main>
+        <section class="page-hero page-width contact-hero">
+            <p class="eyebrow"><span class="eyebrow-mark"></span> We want to hear from you</p>
+            <h1>Questions? We're<br><span>easy to reach.</span></h1>
+            <p class="page-intro">Get in touch with the team using the details below.</p>
+        </section>
 
-            <h1>Schedule a Meeting</h1>
-            <h3>Find a time that works for you!</h3>
-        
-            <!-- Calendly inline widget begin -->
-            <div 
-                class="calendly-inline-widget" 
-                data-url="https://calendly.com/asherjfrederick/30min" 
-                style="min-width:320px; height:700px; width:100%;">
+        <section class="contact-section page-width" id="contact">
+            <div class="contact-copy"><p class="eyebrow">Contact the team</p>
+                <h2>Here when<br><span>you need us.</span></h2>
+                <p>Whether you have a question about a product or just need a little help, send us an email or give us a call.</p>
+                <p class="contact-note">Example contact details for a company.</p>
             </div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-            <!-- Calendly inline widget end -->
 
-    </section>
+            <div class="contact-details">
+                <div><span class="contact-label">EMAIL</span><a href="mailto:hello@example.com">hello@example.com</a></div>
+                <div><span class="contact-label">PHONE</span><a href="tel:+5555555555">(555) 555-5555</a></div>
+                <div><span class="contact-label">VISIT</span><p>123 Example Street<br>Anytown, USA</p></div>
+                <div><span class="contact-label">HOURS</span><p>Monday–Friday, 9:00 am–5:00 pm</p></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="page-width footer-inner">
+            <a href="index.html" class="footer-brand">Your Business</a>
+            <p>Example website for a business.</p>
+            <span>© 2026 Your Business</span>
+        </div>
+    </footer>
 
 </body>
+
 </html>
