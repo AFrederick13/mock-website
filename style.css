@@ -1,3 +1,170 @@
 body {
     background-color: rgb(234, 234, 234);
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Pushes logo left, links right */
+    align-items: center;            /* Centers items vertically */
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+/* Logo styling */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #222;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Link list container */
+nav ul.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+}
+
+/* Button-styled nav items */
+nav li {
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: 2px solid #0061cf;
+    background-color: #5706ec;
+    border-radius: 20px;
+    text-align: center;
+    text-shadow: black 2px 2px 3px;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+nav li:hover {
+    background-color: #4304b8;
+    transform: translateY(-2px);
+}
+
+nav a {
+    display: block;
+    padding: 0.4rem 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(215, 215, 215, 0.85); /* Semi-transparent */
+    backdrop-filter: blur(8px);                 /* Blurs content passing underneath */
+    -webkit-backdrop-filter: blur(8px);         /* Safari support */
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    margin-left: 1rem;
+}
+
+p {
+    margin: auto;
+    padding: .75rem;
+}
+
+#businesslogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+  width: 200px;
+}
+
+/* --- Hamburger Button Styles (Hidden by default on desktop) --- */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 32px;
+    height: 28px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1100;
+}
+
+.hamburger .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #222;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Animate hamburger bars into an 'X' when active */
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+
+/* --- Mobile Styles --- */
+@media (max-width: 600px) {
+    .hamburger {
+        display: flex; /* Show hamburger button on mobile */
+    }
+
+    nav ul.nav-links {
+        display: none; /* Hide default horizontal list */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%; /* Drop down directly below the header */
+        left: 0;
+        background-color: rgba(215, 215, 215, 0.95);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        padding: 1.25rem 0;
+        gap: 1rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-bottom: 2px solid #0061cf;
+    }
+
+    /* Display dropdown when toggled */
+    nav ul.nav-links.active {
+        display: flex;
+    }
+
+    /* Full-width clean buttons in the mobile dropdown */
+    nav ul.nav-links li {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    nav a {
+        padding: 0.6rem 1rem;
+    }
 }
